@@ -1,0 +1,64 @@
+<!-- Home Component HTML -->
+
+<!-- Header Component Carouael Slide -->
+<app-header [headerTrendingMovies]='trendingMovies'></app-header>
+
+<!-- Movies Service  -->
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+    <div class="border w-25 my-5"></div>
+    <h2 class="cCC-fc-white">Trending Movies<br /> To Watch Right Now</h2>
+    <p class="cCC-fc-white">Trending Movies To Watch Right Now</p>
+    <div class="border w-25 my-5"></div>
+
+  </div>
+  <div *ngFor='let movie of trendingMovies' class="col-md-2 position-relative">
+    <div class="movie">
+      <a [routerLink]="['/moviedetails', movie.id]">
+      <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+      <h3 class="h6 cCC-fc-white">{{movie.title}}</h3>
+      <div class="vote position-absolute end-0 top-0">
+        {{movie.vote_average}}
+      </div>
+    </a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="border w-25 my-5"></div>
+    <h2 class="cCC-fc-white">Trending Tv<br /> To Watch Right Now</h2>
+    <p class="cCC-fc-white">Trending TV To Watch Right Now</p>
+    <div class="border w-25 my-5"></div>
+  </div>
+
+  <div *ngFor='let movie of trendingUpcoming' class="col-md-2 position-relative">
+    <div class="movie">
+      <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+      <h3 class="h6 cCC-fc-white">{{movie.title}}</h3>
+      <div class="vote position-absolute end-0 top-0">
+        {{movie.vote_average}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="border w-25 my-5"></div>
+    <h2 class="cCC-fc-white">Trending upcoming<br /> To Watch Right Now</h2>
+    <p class="cCC-fc-white">Trending TV To Watch Right Now</p>
+    <div class="border w-25 my-5"></div>
+  </div>
+
+  <div *ngFor='let movie of trendingUpcoming' class="col-md-2 position-relative">
+    <div class="movie">
+      <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+      <h3 class="h6 cCC-fc-white">{{movie.title}}</h3>
+      <div class="vote position-absolute end-0 top-0">
+        {{movie.vote_average}}
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container position-relative mt-5"><!-- Movie Details Component HTML -->
+<div class="row">
+  <div class="col-md-4">
+    <!-- movieDetails from movieDetails.component.ts -->
+    <img [src]="imgPrefix+movieDetails.poster_path" class="w-100" alt="">
+  </div>
+  <div class="col-md-6">
+    <!-- movieDetails from movieDetails.component.ts title from API-->
+    <h3 class="cCC-fc-white">{{ movieDetails.title }}</h3>
+    <!-- movieDetails from movieDetails.component.ts tagline from API-->
+    <h2 class="cCC-fc-white">{{ movieDetails.tagline }}</h2>
+    <!-- movieDetails from movieDetails.component.ts overview from API-->
+    <p>{{ movieDetails.overview }}</p>
+  </div>
+</div>
+</div>

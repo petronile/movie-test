@@ -1,0 +1,15 @@
+<!-- Header Component HTML -->
+<header class="vh-100 mb-4 d-flex align-items-end position-relative imcc-headerbg imCC-Background-Cover">
+  <!-- Carouael Slide -->
+  <div class="container  ">
+    <owl-carousel-o [options]="customOptions">
+      <!-- For headerTrendingMovies From header.component.ts-->
+      <ng-container  *ngFor="let movie of headerTrendingMovies">
+        <ng-template  carouselSlide [id]="movie.id">
+          <!-- imgPrefix From header.component.ts -->
+          <img class=" p-2 "  [src]="imgPrefix+movie.poster_path" [alt]="movie.alt" [title]="movie.title">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</header>
